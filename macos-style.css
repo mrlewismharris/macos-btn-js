@@ -1,0 +1,102 @@
+@font-face {font-family:macfont;src:url('macfont.woff')}
+
+.macosBtn {
+	margin:5px 0px 0px 5px;
+	overflow:hidden;
+	display:inline;
+	float:left;
+	border-radius:5px;
+	box-shadow:1px 1px 3px #ddd
+}
+
+/* Secondary button - Blue */
+.macosBtnBgMain {
+	background: rgb(16,95,251);
+	background: linear-gradient(0deg, rgba(16,95,251,1) 0%, rgba(77,159,246,1) 100%);
+	padding:1px;
+	border-radius:5px;
+}
+
+.macosBtnContentMain {
+	text-align:center;
+	cursor:url(macos-pointer.png) 6 0, pointer;/* comment this line to remove custom mac cursor */
+	color:#fff;
+	font-family:macfont;/*change font here */
+	font-weight:bold;
+	font-size:11px;
+	max-height:19px;
+	width:auto;
+	background: rgb(19,130,254);
+	background: linear-gradient(0deg, rgba(19,130,254,1) 0%, rgba(105,176,250,1) 100%);
+	border-radius:4px;
+	padding:4px 10px 3px 10px;
+	overflow:hidden
+}
+
+.macosBtnContentMain:active {
+	background: rgb(9,114,233);
+	background: linear-gradient(0deg, rgba(9,114,233,1) 0%, rgba(89,162,240,1) 100%);
+}
+
+/* Secondary button - Grey */
+.macosBtnBgSecondary {
+	background: rgb(16,95,251);
+	background: linear-gradient(0deg, rgba(197,198,197,1) 0%, rgba(220,220,220,1) 100%);
+	padding:1px;
+	border-radius:5px;
+}
+
+.macosBtnContentSecondary {
+	text-align:center;
+	cursor:url(macos-pointer.png) 6 0, pointer;/* comment this line to remove custom mac cursor */
+	color:#000;
+	font-family:macfont;/*change font here */
+	font-weight:bold;
+	font-size:11px;
+	max-height:19px;
+	width:auto;
+	background: rgb(255,255,255);
+	border-radius:4px;
+	padding:4px 10px 3px 10px;
+	overflow:hidden
+}
+
+.macosBtnContentSecondary:active {
+	background: rgb(240,240,240);
+}
+
+
+
+
+
+/* Some CSS tricks */
+
+/* avoid cursor selection onclick */
+.noselect {
+	-webkit-touch-callout: none;-webkit-user-select: none;-khtml-user-select: none;
+    -moz-user-select: none;-ms-user-select: none;user-select: none;
+}
+
+/* remove all styling from an element */
+.reset {
+    all: initial;
+    * {
+        all: unset;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

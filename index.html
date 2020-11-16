@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="UTF-8">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<title>macos-btn</title>
+<script src="macos-btn.js"></script>
+<link rel="stylesheet" href="macos-style.css">
+
+</head>
+<body>
+
+<h2>MacOS-Btn Description and usage</h2>
+<p>This page displays the methods for displaying the macos buttons</p>
+
+<h3>Static HTML</h3>
+<p>These buttons are statically placed in the html file containing: An outer html div with the ID of the button (also some left-spacing to look nicer), an inner-outer div layer that creates a macos looking gradient border (css is just a 1px pad with the gradient background), and an inner-content div that contains the content of the button - and css to make it look nice. You can disable custom font and cursor in the macos-btn.css file.</p>
+
+<div id="temp" class="macosBtn noselect">
+	<div class="macosBtnBgMain">
+		<a href="#" class="reset"><div class="macosBtnContentMain">HTML Main</div></a>
+	</div>
+</div>
+
+<div id="temp" class="macosBtn noselect">
+	<div class="macosBtnBgSecondary">
+		<a href="#" class="reset"><div class="macosBtnContentSecondary">HTML Secondary</div></a>
+	</div>
+</div>
+
+<br><br><h3>Dynamic HTML / jQuery appended class instances</h3>
+<p>These buttons are dynamically generated with the short code:</p>
+<pre>$('body').append(new macosBtn("Main btn jQuery append", 1, "#", "id").getHtml());
+$('body').append(new macosBtn("Secondary btn jQuery append", 2, "#", "id").getHtml());</pre>
+<p>The class constructor's argument descriptions are:</p>
+<pre>var btn = new macosBtn(String txt, Int type, String href, String id);
+
+String txt: The label that the button will display
+Int type: The type type of button style (1 or 2 by default, add more css styles and options with the cases)
+String href: The  href to redirect the user on click
+String id: The Id for the button to use as a selector</pre>
+
+<script>
+$('body').append(new macosBtn("JS Main", 1, "#", "id").getHtml());
+$('body').append(new macosBtn("JS Secondary", 2, "#", "id").getHtml());
+</script>
+
+<br><br><h3>Additional info</h3>
+<p>If you don't know which to use, a short explanation: Static HTML buttons should be used on webpages and template webpages that do not have dynamic content, e.g. Homepage, pages where the user is not required to have javascript enabled. Dynamic HTML buttons should be used with dynamically accessed interfaces, such as a pop-up modal, dynamic content, and any screens/content which should require the used of javascript. <b>It may be worth implementing a <i>contingency</i> plan for user's that do not have js enabled, so they acrtually have buttons to click</b> - or implement an entirely different (non-js) method of displaying the content.</p>
+
+</body>
+</html>
+
+
+
+
+
+
